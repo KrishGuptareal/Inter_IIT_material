@@ -128,15 +128,15 @@ We added some wine chemistry rules:
 \section{Better Matching (Not Just 1 Neighbor)}
 %-------------------------------------------------------------------
 
-Instead of finding just 1 closest match, we find 5 and average them:
+Instead of finding just 1 closest match, we :
 
 \begin{center}
-\begin{tabular}{ccc}
-\textbf{Simple Way} & & \textbf{Our Way (Better)} \\
-Find 1 closest row & $\rightarrow$ & Find 5 closest rows \\
-Take its value & $\rightarrow$ & Average their values \\
-Might be bad match & $\rightarrow$ & Smoother, more reliable \\
-\end{tabular}
+Find 5 closest rows 
+\\
+Average their values 
+\\
+(This is Smoother and more reliable) 
+
 \end{center}
 
 %-------------------------------------------------------------------
@@ -167,24 +167,7 @@ citric acid & G1 + G2 (averaged) \\
 \end{table}
 
 %-------------------------------------------------------------------
-\section{Validation (Did It Work?)}
-%-------------------------------------------------------------------
 
-\begin{table}[H]
-\centering
-\begin{tabular}{@{}lcc@{}}
-\toprule
-\textbf{Check} & \textbf{Expected} & \textbf{Result} \\
-\midrule
-Number of rows & 1000 & 1000 \checkmark \\
-Number of columns & 12 & 12 \checkmark \\
-Missing values & 0 & 0 \checkmark \\
-Free SO$_2$ $\leq$ Total SO$_2$ & Always & Always \checkmark \\
-pH in normal range & Yes & Yes \checkmark \\
-\bottomrule
-\end{tabular}
-\caption{All checks passed}
-\end{table}
 
 %-------------------------------------------------------------------
 \section{How to Run It}
